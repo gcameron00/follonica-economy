@@ -1,15 +1,89 @@
 <!doctype html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="color-scheme" content="light dark" />
-    <title>About</title>
-    <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
-    <link rel="stylesheet" href="/assets/css/styles.css">
-  </head>
-  <body>
-    <h1>About</h1>
-    <p><a href="/">Back home</a></p>
-  </body>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="color-scheme" content="light dark" />
+  <script>document.documentElement.className="js";</script>
+  <title>About · The Follonica Economy Project</title>
+  <meta name="description" content="What this site is, who it's for, how it was built and the sources behind it — an independent, educational explainer of Follonica's economy." />
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap" />
+  <link rel="stylesheet" href="/assets/css/styles.css" />
+  <script defer src="/assets/js/main.js"></script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-header">
+    <nav class="nav" aria-label="Primary">
+      <a class="brand" href="/">
+        <svg class="mark" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="#0e7490"/><circle cx="22" cy="10" r="4" fill="#e9c46a"/><path d="M3 20 q4 -4 8 0 t8 0 t8 0 t8 0" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round"/><path d="M3 25 q4 -4 8 0 t8 0 t8 0 t8 0" fill="none" stroke="#cff3f6" stroke-width="2.2" stroke-linecap="round"/></svg>
+        Follonica<span style="color:var(--muted);font-weight:400">·Economy</span>
+      </a>
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="menu">☰</button>
+      <div class="nav-links" id="menu">
+        <a href="/">Home</a>
+        <a href="/economy/">Economy</a>
+        <a href="/surroundings/">Surroundings</a>
+        <a href="/future/">Future</a>
+        <a href="/game/">Game</a>
+        <a href="/about/" aria-current="page">About</a>
+        <button class="theme-toggle" type="button" title="Toggle theme">☾</button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <div class="container">
+        <span class="eyebrow">About this project</span>
+        <h1>A friendly explainer of a small-town economy</h1>
+        <p class="lead">This site exists to help visitors understand how Follonica, on the Tuscan coast of Italy, actually makes its living — with a bias toward data, a love of history, and just enough play to make it stick.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="container prose" style="max-width:74ch">
+        <h2>What you'll find here</h2>
+        <ul>
+          <li><a href="/economy/"><strong>Economy</strong></a> — the three economic levels, the main industries and the seasonal, iron-rooted history behind them.</li>
+          <li><a href="/surroundings/"><strong>Surroundings</strong></a> — the Gulf, the Maremma, the mining hills and the neighbouring towns that share the economy.</li>
+          <li><a href="/future/"><strong>Future</strong></a> — the trends likely to reshape the town over the next generation.</li>
+          <li><a href="/game/"><strong>Game</strong></a> — “Mayor of the Gulf”, a ten-season balancing act that turns the site's ideas into decisions.</li>
+        </ul>
+
+        <h2>Who it's for</h2>
+        <p>Curious visitors, students, second-home owners and anyone who has ever wondered what a beautiful beach town does for money in February. No economics background required — every chart is captioned and every term explained in plain language.</p>
+
+        <h2>About Follonica</h2>
+        <p>Follonica is a coastal town of roughly twenty-one thousand residents in the province of Grosseto, in the Maremma region of Tuscany. It grew in the nineteenth century around grand-ducal iron foundries fed by ore from the island of Elba and the nearby Metalliferous Hills — a rare Italian example of an industrial town that later became a holiday one. Today its economy is built on summer tourism, services and the enduring appeal of its gulf, beaches and pinewoods.</p>
+
+        <h2>How it's built</h2>
+        <p>Deliberately simple. The site is <strong>static HTML, CSS and vanilla JavaScript</strong> — no framework, no build step — designed to be hosted on <strong>Cloudflare Pages</strong>. The charts are hand-rolled SVG that read their data straight from the page markup and re-colour themselves for light or dark mode. That keeps the whole thing fast, portable and easy to edit.</p>
+
+        <h2>About the data</h2>
+        <p>Every figure on the site is a <strong>rounded, representative estimate</strong> assembled for teaching, not an official statistic. The full explanation and source list lives in the <a href="/economy/#data">data note</a>. If you'd like to make the numbers authoritative, the <a href="https://github.com/gcameron00/follonica-economy">project README</a> explains exactly where to drop verified figures.</p>
+
+        <div class="note">This is an independent educational project. It is not affiliated with, nor endorsed by, the Comune di Follonica or any official body.</div>
+
+        <div class="btn-row"><a class="btn btn-primary" href="/economy/">Start with the economy →</a><a class="btn btn-ghost" href="/game/">Or play the game</a></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span data-year>2026</span> Follonica Economy — an independent educational project. Not affiliated with the Comune di Follonica.</p>
+      <nav aria-label="Footer">
+        <a href="/">Home</a>
+        <a href="/economy/">Economy</a>
+        <a href="/surroundings/">Surroundings</a>
+        <a href="/future/">Future</a>
+        <a href="/game/">Game</a>
+      </nav>
+    </div>
+  </footer>
+</body>
 </html>
