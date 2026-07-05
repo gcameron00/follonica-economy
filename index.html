@@ -1,17 +1,155 @@
 <!doctype html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="color-scheme" content="light dark" />
-    <title>Home</title>
-    <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
-    <link rel="stylesheet" href="/assets/css/styles.css">
-    <script defer src="/assets/js/main.js"></script>
-  </head>
-  <body>
-    <h1>It works 🎉</h1>
-    <p>This site is deployed using Cloudflare Pages.</p>
-    <p><a href="/about/">About</a></p>
-  </body>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="color-scheme" content="light dark" />
+  <script>document.documentElement.className="js";</script>
+  <title>The Economy of Follonica · From Cast Iron to Coastline</title>
+  <meta name="description" content="How a 19th-century iron-foundry town on the Tuscan coast became one of the Maremma's leading seaside economies — the sectors, the data and the history of Follonica, Italy." />
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap" />
+  <link rel="stylesheet" href="/assets/css/styles.css" />
+  <script defer src="/assets/js/main.js"></script>
+  <script defer src="/assets/js/charts.js"></script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-header">
+    <nav class="nav" aria-label="Primary">
+      <a class="brand" href="/">
+        <svg class="mark" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="#0e7490"/><circle cx="22" cy="10" r="4" fill="#e9c46a"/><path d="M3 20 q4 -4 8 0 t8 0 t8 0 t8 0" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round"/><path d="M3 25 q4 -4 8 0 t8 0 t8 0 t8 0" fill="none" stroke="#cff3f6" stroke-width="2.2" stroke-linecap="round"/></svg>
+        Follonica<span style="color:var(--muted);font-weight:400">·Economy</span>
+      </a>
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="menu">☰</button>
+      <div class="nav-links" id="menu">
+        <a href="/" aria-current="page">Home</a>
+        <a href="/economy/">Economy</a>
+        <a href="/surroundings/">Surroundings</a>
+        <a href="/future/">Future</a>
+        <a href="/game/">Game</a>
+        <a href="/about/">About</a>
+        <button class="theme-toggle" type="button" title="Toggle theme">☾</button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow">Follonica · Maremma · Tuscany</span>
+          <h1>From cast iron to coastline.</h1>
+          <p class="lead">Follonica is a town the sea rebuilt. Founded around a grand-ducal iron foundry, it traded furnaces for beach umbrellas and became one of the Gulf of Follonica's leading tourist economies. Here is how that economy works — in data and in history.</p>
+          <div class="btn-row">
+            <a class="btn btn-primary" href="/economy/">Explore the economy →</a>
+            <a class="btn btn-ghost" href="/game/">Play “Mayor of the Gulf”</a>
+          </div>
+        </div>
+        <div>
+          <div class="chart-card reveal">
+            <h3>What the town earns from</h3>
+            <p class="sub">Share of local value added, by broad sector (illustrative)</p>
+            <figure>
+              <div class="chart" data-chart="donut"
+                   data-values='[{"label":"Tourism &amp; hospitality","value":42},{"label":"Trade &amp; services","value":28},{"label":"Public &amp; social","value":14},{"label":"Manufacturing &amp; crafts","value":10},{"label":"Farming, sea &amp; food","value":6}]'
+                   data-opts='{"legend":true,"centerTop":"€","centerBottom":"value added"}'></div>
+              <div class="legend" data-auto></div>
+              <figcaption>Illustrative shares for teaching purposes — see the <a href="/economy/#data">data note</a>.</figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Key stats -->
+    <section>
+      <div class="container">
+        <div class="grid grid-4">
+          <div class="card stat reveal"><div class="num">~21<span class="unit">k</span></div><div class="label">Year-round residents</div></div>
+          <div class="card stat reveal"><div class="num">×4<span class="unit">+</span></div><div class="label">Population multiplier at the August peak</div></div>
+          <div class="card stat reveal"><div class="num">15<span class="unit">km</span></div><div class="label">Of gulf coastline &amp; sandy beach</div></div>
+          <div class="card stat reveal"><div class="num">1836</div><div class="label">The grand-ducal foundry era in full swing</div></div>
+        </div>
+        <p class="note reveal" style="margin-top:1.4rem">Figures are rounded, representative estimates gathered for this explainer, drawn from public sources such as ISTAT, the Comune di Follonica and the Tuscan Mining Geopark. They are here to build intuition, not to be quoted as official statistics.</p>
+      </div>
+    </section>
+
+    <!-- Three engines -->
+    <section style="background:var(--surface-2)">
+      <div class="container">
+        <span class="eyebrow">The shape of it</span>
+        <h2>Three engines drive the local economy</h2>
+        <p class="lead">Like much of coastal Tuscany, Follonica runs on services — but its history gives each layer a distinct character.</p>
+        <div class="grid grid-3" style="margin-top:1.6rem">
+          <article class="card reveal">
+            <div class="icon">🏖️</div>
+            <h3>The tertiary engine</h3>
+            <p>Tourism, hospitality, retail and second homes. The summer season concentrates most of the year's spending into roughly twelve weeks — the town's great strength and its scheduling headache.</p>
+          </article>
+          <article class="card reveal">
+            <div class="icon">🛠️</div>
+            <h3>The industrial memory</h3>
+            <p>The foundries closed, but metalworking, boat-yards, construction and artisan food keep a secondary sector alive — and Piombino's steelworks loom just up the coast.</p>
+          </article>
+          <article class="card reveal">
+            <div class="icon">🌾</div>
+            <h3>The land &amp; sea</h3>
+            <p>Maremma olive oil, wine, honey and small-scale fishing form a modest primary sector that increasingly sells itself as “experience”: agritourism, tastings and farm stays.</p>
+          </article>
+        </div>
+        <div class="btn-row"><a class="btn btn-primary" href="/economy/">See the sector data →</a></div>
+      </div>
+    </section>
+
+    <!-- History teaser -->
+    <section>
+      <div class="container">
+        <div class="grid grid-2" style="align-items:center">
+          <div class="reveal">
+            <span class="eyebrow">A little history</span>
+            <h2>A company town that outlived its company</h2>
+            <p class="lead">Follonica barely existed until iron gave it a reason to. Grand Duke Leopold II of Tuscany expanded the ironworks in the early 1800s; the town grew around the furnaces, complete with a church whose portico is cast in iron. When the foundries faded, the beach took over.</p>
+            <div class="btn-row"><a class="btn btn-ghost" href="/economy/#history">Read the full timeline →</a></div>
+          </div>
+          <div class="reveal">
+            <ul class="timeline">
+              <li><span class="year">early 1800s</span><p>Grand-ducal foundries expand; a town forms around the iron.</p></li>
+              <li><span class="year">1838</span><p>The Church of San Leopoldo rises with a cast-iron portico — the foundry as civic pride.</p></li>
+              <li><span class="year">mid-1900s</span><p>Iron production winds down; the industrial monoculture ends.</p></li>
+              <li><span class="year">1960s→</span><p>Beach tourism and second homes become the new economic base.</p></li>
+              <li><span class="year">today</span><p>MAGMA museum turns the old furnace into heritage — and a visitor draw.</p></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section style="background:var(--surface-2)">
+      <div class="container" style="text-align:center">
+        <span class="eyebrow">Try it yourself</span>
+        <h2>Could you run the Gulf's economy for a decade?</h2>
+        <p class="lead" style="margin-inline:auto">Balance tourism, heritage, the pinewood and the town's finances across ten seasons. Weather, trends and luck will get a vote.</p>
+        <div class="btn-row" style="justify-content:center"><a class="btn btn-primary" href="/game/">Play the game →</a></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span data-year>2026</span> Follonica Economy — an independent educational project. Not affiliated with the Comune di Follonica.</p>
+      <nav aria-label="Footer">
+        <a href="/economy/">Economy</a>
+        <a href="/surroundings/">Surroundings</a>
+        <a href="/future/">Future</a>
+        <a href="/game/">Game</a>
+        <a href="/about/">About</a>
+      </nav>
+    </div>
+  </footer>
+</body>
 </html>

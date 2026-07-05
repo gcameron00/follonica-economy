@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="color-scheme" content="light dark" />
+  <script>document.documentElement.className="js";</script>
+  <title>The Economy of Follonica · Sectors, Industries &amp; History</title>
+  <meta name="description" content="A data-led breakdown of Follonica's economy: the three economic levels, its main industries, the seasonal tourism cycle and the iron-foundry history that shaped it." />
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap" />
+  <link rel="stylesheet" href="/assets/css/styles.css" />
+  <script defer src="/assets/js/main.js"></script>
+  <script defer src="/assets/js/charts.js"></script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-header">
+    <nav class="nav" aria-label="Primary">
+      <a class="brand" href="/">
+        <svg class="mark" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="#0e7490"/><circle cx="22" cy="10" r="4" fill="#e9c46a"/><path d="M3 20 q4 -4 8 0 t8 0 t8 0 t8 0" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round"/><path d="M3 25 q4 -4 8 0 t8 0 t8 0 t8 0" fill="none" stroke="#cff3f6" stroke-width="2.2" stroke-linecap="round"/></svg>
+        Follonica<span style="color:var(--muted);font-weight:400">·Economy</span>
+      </a>
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="menu">☰</button>
+      <div class="nav-links" id="menu">
+        <a href="/">Home</a>
+        <a href="/economy/" aria-current="page">Economy</a>
+        <a href="/surroundings/">Surroundings</a>
+        <a href="/future/">Future</a>
+        <a href="/game/">Game</a>
+        <a href="/about/">About</a>
+        <button class="theme-toggle" type="button" title="Toggle theme">☾</button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <div class="container">
+        <span class="eyebrow">The economy, in detail</span>
+        <h1>How Follonica makes a living</h1>
+        <p class="lead">Three economic levels, a handful of industries and one very seasonal calendar. Below, the structure of the local economy — and the iron-age history that still shapes it.</p>
+      </div>
+    </section>
+
+    <!-- Economic levels -->
+    <section>
+      <div class="container">
+        <span class="eyebrow">Economic levels</span>
+        <h2>Primary, secondary, tertiary</h2>
+        <p class="lead">Economists sort activity into levels — extracting, making and serving. Follonica's mix leans hard toward the tertiary, a common story on the Tuscan coast.</p>
+
+        <div class="grid grid-2" style="margin-top:1.8rem;align-items:start">
+          <div class="chart-card reveal">
+            <h3>Employment by economic level</h3>
+            <p class="sub">Share of local jobs (illustrative)</p>
+            <figure class="chart-wrap">
+              <div class="chart" data-chart="bar"
+                   data-values='[{"label":"Primary","value":6,"color":"--c4"},{"label":"Secondary","value":19,"color":"--c2"},{"label":"Tertiary","value":75,"color":"--c1"}]'
+                   data-opts='{"fmt":null,"height":300}'></div>
+              <figcaption>Values in % of jobs. Illustrative — see the <a href="#data">data note</a>.</figcaption>
+            </figure>
+          </div>
+          <div class="reveal" style="display:grid;gap:1rem">
+            <div class="card">
+              <span class="pill">Primary · ~6%</span>
+              <h3 style="margin-top:.6rem">Extracting &amp; growing</h3>
+              <p>Maremma olive groves and vineyards, honey, market gardens and a small artisanal fishing fleet. Increasingly monetised through agritourism rather than raw output.</p>
+            </div>
+            <div class="card">
+              <span class="pill">Secondary · ~19%</span>
+              <h3 style="margin-top:.6rem">Making &amp; building</h3>
+              <p>Construction, metal and mechanical workshops, boat maintenance, food processing. The direct descendant of the town's foundry DNA.</p>
+            </div>
+            <div class="card">
+              <span class="pill">Tertiary · ~75%</span>
+              <h3 style="margin-top:.6rem">Serving &amp; hosting</h3>
+              <p>Hotels, campsites, restaurants, bars, beach concessions, retail, real-estate and public services. This is the modern engine of Follonica.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Industries -->
+    <section style="background:var(--surface-2)">
+      <div class="container">
+        <span class="eyebrow">Industries</span>
+        <h2>Where the jobs actually are</h2>
+        <p class="lead">Zoom past the three big levels and the working town comes into focus: a service economy built around visitors, property and the everyday needs of a mid-sized coastal community.</p>
+        <div class="chart-card reveal" style="margin-top:1.6rem">
+          <h3>Estimated employment by industry</h3>
+          <p class="sub">Share of local jobs, largest first (illustrative)</p>
+          <figure>
+            <div class="chart" data-chart="hbar"
+                 data-values='[{"label":"Tourism &amp; hospitality","value":26},{"label":"Retail &amp; trade","value":18},{"label":"Public services","value":15},{"label":"Construction &amp; property","value":12},{"label":"Professional services","value":11},{"label":"Manufacturing &amp; crafts","value":9},{"label":"Farming, fishing &amp; food","value":6},{"label":"Transport &amp; logistics","value":3}]'
+                 data-opts='{"height":360}'></div>
+            <figcaption>Values in % of jobs. Illustrative — see the <a href="#data">data note</a>.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seasonality -->
+    <section>
+      <div class="container">
+        <span class="eyebrow">The seasonal machine</span>
+        <h2>An economy with a summer heartbeat</h2>
+        <p class="lead">Follonica's defining economic fact is seasonality. Population and spending swell in July and August, then fall back — a rhythm that shapes hiring, housing and public budgets.</p>
+        <div class="grid grid-2" style="margin-top:1.6rem;align-items:start">
+          <div class="chart-card reveal">
+            <h3>People present in town, by month</h3>
+            <p class="sub">Residents + visitors, indexed (illustrative)</p>
+            <figure>
+              <div class="chart" data-chart="line"
+                   data-values='[{"name":"People present","color":"--c1","points":[{"x":"Jan","y":22},{"x":"Feb","y":22},{"x":"Mar","y":24},{"x":"Apr","y":30},{"x":"May","y":38},{"x":"Jun","y":62},{"x":"Jul","y":85},{"x":"Aug","y":95},{"x":"Sep","y":55},{"x":"Oct","y":30},{"x":"Nov","y":23},{"x":"Dec","y":24}]}]'
+                   data-opts='{"area":true,"height":300}'></div>
+              <figcaption>Thousands of people, illustrative index. See the <a href="#data">data note</a>.</figcaption>
+            </figure>
+          </div>
+          <div class="reveal" style="display:grid;gap:1rem">
+            <div class="card">
+              <h3>Why it matters</h3>
+              <p>A four-fold summer swing means beach concessions, restaurants and shops must earn a year's margin in a season, while roads, water and waste must be sized for the peak but paid for year-round.</p>
+            </div>
+            <div class="card">
+              <h3>The quiet months</h3>
+              <p>Extending the season — spring cycling, autumn food events, off-peak wellness — is the single biggest lever local planners reach for. You can pull that lever yourself in the <a href="/game/">game</a>.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- History -->
+    <section id="history" style="background:var(--surface-2)">
+      <div class="container">
+        <span class="eyebrow">Historical context</span>
+        <h2>Two hundred years, two economies</h2>
+        <p class="lead">Follonica is unusual: an Italian coastal town that was industrial <em>before</em> it was touristic. Its structure flipped almost completely inside a century.</p>
+
+        <div class="grid grid-2" style="margin-top:1.6rem;align-items:start">
+          <div class="reveal">
+            <ul class="timeline">
+              <li><span class="year">1577–1700s</span><p>Medici-era ironworking uses local water and forest charcoal near the coast; the area is thinly settled and malarial.</p></li>
+              <li><span class="year">1830s</span><p>Grand Duke Leopold II of Lorraine invests heavily in the <em>Regie Fonderie</em>. Iron ore from Elba is smelted here; a company town takes shape.</p></li>
+              <li><span class="year">1838</span><p>The Church of San Leopoldo is completed with a cast-iron portico and fittings — the foundry showing off in its own building material.</p></li>
+              <li><span class="year">late 1800s</span><p>Under the new Italian state the works pass to private and national operators; Follonica is, above all, an iron town.</p></li>
+              <li><span class="year">1900s</span><p>Land reclamation tames the marshes; rail and roads improve; the beach and pinewood begin to draw visitors.</p></li>
+              <li><span class="year">mid-1900s</span><p>Heavy iron production winds down. The industrial monoculture that built the town no longer sustains it.</p></li>
+              <li><span class="year">1960s–1990s</span><p>Mass beach tourism and second-home building remake the economy around summer.</p></li>
+              <li><span class="year">2013</span><p>The MAGMA museum opens inside the old furnace hall — heritage becomes a tourism asset in its own right.</p></li>
+            </ul>
+          </div>
+          <div class="chart-card reveal">
+            <h3>Structure of employment: then vs now</h3>
+            <p class="sub">Share of jobs by level, ~1920s vs today (illustrative)</p>
+            <figure>
+              <div class="chart" data-chart="bar"
+                   data-values='[{"label":"Primary ~1920","value":34,"color":"--c4"},{"label":"Secondary ~1920","value":48,"color":"--c2"},{"label":"Tertiary ~1920","value":18,"color":"--c1"}]'
+                   data-opts='{"height":260}'></div>
+              <div class="chart" data-chart="bar" style="margin-top:1rem"
+                   data-values='[{"label":"Primary today","value":6,"color":"--c4"},{"label":"Secondary today","value":19,"color":"--c2"},{"label":"Tertiary today","value":75,"color":"--c1"}]'
+                   data-opts='{"height":260}'></div>
+              <figcaption>Values in % of jobs. Illustrative reconstruction — see the <a href="#data">data note</a>.</figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Data note -->
+    <section id="data">
+      <div class="container prose" style="max-width:72ch">
+        <span class="eyebrow">About the numbers</span>
+        <h2>Data note &amp; sources</h2>
+        <p>This is an educational explainer, not an official statistical release. The charts use <strong>rounded, representative estimates</strong> assembled to illustrate the <em>shape</em> of Follonica's economy — the direction and rough magnitude of things — rather than to report exact, audited figures.</p>
+        <p>They draw on the kinds of public sources you would consult for the real numbers:</p>
+        <ul>
+          <li><strong>ISTAT</strong> — Italy's national statistics institute (population, census, employment by sector).</li>
+          <li><strong>Comune di Follonica</strong> — municipal open data, tourism and planning documents.</li>
+          <li><strong>Regione Toscana / Toscana Notizie</strong> — regional tourism and economic statistics.</li>
+          <li><strong>Parco Nazionale delle Colline Metallifere</strong> (Tuscan Mining UNESCO Global Geopark) and <strong>MAGMA</strong> — for the mining and foundry history.</li>
+        </ul>
+        <p class="note">Want to make this rigorous? Swap the illustrative arrays in the page markup for verified ISTAT/Comune figures and update this note with the exact tables and years. The chart code reads its data straight from the HTML, so no build step is required.</p>
+        <div class="btn-row"><a class="btn btn-primary" href="/future/">Where is it all heading? →</a></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span data-year>2026</span> Follonica Economy — an independent educational project. Not affiliated with the Comune di Follonica.</p>
+      <nav aria-label="Footer">
+        <a href="/">Home</a>
+        <a href="/surroundings/">Surroundings</a>
+        <a href="/future/">Future</a>
+        <a href="/game/">Game</a>
+        <a href="/about/">About</a>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>

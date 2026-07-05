@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="color-scheme" content="light dark" />
+  <script>document.documentElement.className="js";</script>
+  <title>Around Follonica · The Maremma, the Gulf &amp; the Mining Hills</title>
+  <meta name="description" content="Follonica's economy doesn't stop at the town line. Meet the Gulf of Follonica, the Maremma, the Colline Metallifere mining geopark and the neighbouring towns that shape it." />
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap" />
+  <link rel="stylesheet" href="/assets/css/styles.css" />
+  <script defer src="/assets/js/main.js"></script>
+  <script defer src="/assets/js/charts.js"></script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-header">
+    <nav class="nav" aria-label="Primary">
+      <a class="brand" href="/">
+        <svg class="mark" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="#0e7490"/><circle cx="22" cy="10" r="4" fill="#e9c46a"/><path d="M3 20 q4 -4 8 0 t8 0 t8 0 t8 0" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round"/><path d="M3 25 q4 -4 8 0 t8 0 t8 0 t8 0" fill="none" stroke="#cff3f6" stroke-width="2.2" stroke-linecap="round"/></svg>
+        Follonica<span style="color:var(--muted);font-weight:400">·Economy</span>
+      </a>
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="menu">☰</button>
+      <div class="nav-links" id="menu">
+        <a href="/">Home</a>
+        <a href="/economy/">Economy</a>
+        <a href="/surroundings/" aria-current="page">Surroundings</a>
+        <a href="/future/">Future</a>
+        <a href="/game/">Game</a>
+        <a href="/about/">About</a>
+        <button class="theme-toggle" type="button" title="Toggle theme">☾</button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <div class="container">
+        <span class="eyebrow">The wider setting</span>
+        <h1>No town is an island — least of all a port one</h1>
+        <p class="lead">Follonica sits at the head of its own gulf, wedged between the sea, the Maremma plain and the old mining hills. Its economy borrows from all three, and from a ring of neighbouring towns.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="grid grid-3">
+          <article class="card reveal">
+            <div class="icon">🌊</div>
+            <h3>The Gulf of Follonica</h3>
+            <p>A broad arc of shallow, sandy coast facing the island of Elba. Blue-flag beaches and a shielded bay make the sea the town's headline asset — and its brand.</p>
+          </article>
+          <article class="card reveal">
+            <div class="icon">🌲</div>
+            <h3>The pineta &amp; nature reserves</h3>
+            <p>Coastal pinewoods and protected wetlands (part of the Bandite di Scarlino and nearby reserves) buffer the beach and pull walkers, cyclists and birdwatchers off-season.</p>
+          </article>
+          <article class="card reveal">
+            <div class="icon">🏔️</div>
+            <h3>The Colline Metallifere</h3>
+            <p>The “Metalliferous Hills” behind town — a UNESCO Global Geopark whose ore fed Follonica's foundries for centuries and now sells mining heritage as tourism.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section style="background:var(--surface-2)">
+      <div class="container">
+        <span class="eyebrow">The neighbourhood</span>
+        <h2>Towns that share the economy</h2>
+        <p class="lead">Follonica works as a hub: a rail stop, a beach base and a shopping town for a cluster of smaller centres, each with its own economic specialism.</p>
+        <div class="grid grid-2" style="margin-top:1.6rem;align-items:start">
+          <div class="reveal" style="display:grid;gap:1rem">
+            <div class="card"><h3>Piombino <span class="pill">steel &amp; port</span></h3><p>Down the coast, home to one of Italy's major steelworks and a ferry port to Elba. The heavy industry Follonica gave up still beats next door.</p></div>
+            <div class="card"><h3>Massa Marittima <span class="pill">heritage</span></h3><p>A hilltop medieval town and former mining capital, with a celebrated cathedral and mining museums — a classic Follonica day trip.</p></div>
+            <div class="card"><h3>Scarlino &amp; Gavorrano <span class="pill">nature &amp; mines</span></h3><p>Marinas, nature reserves and the Parco delle Colline Metallifere's mining parks knit tourism to the old extractive landscape.</p></div>
+            <div class="card"><h3>Elba &amp; the islands <span class="pill">across the water</span></h3><p>The Tuscan Archipelago frames every sunset from the beach and shares the same visitor flows through the Gulf.</p></div>
+          </div>
+          <div class="chart-card reveal">
+            <h3>Roughly how far?</h3>
+            <p class="sub">Approximate distance from Follonica by road, km (illustrative)</p>
+            <figure>
+              <div class="chart" data-chart="hbar"
+                   data-values='[{"label":"Scarlino","value":10},{"label":"Piombino","value":22},{"label":"Massa Marittima","value":22},{"label":"Grosseto (capital)","value":45},{"label":"Elba (via ferry)","value":50},{"label":"Siena","value":90},{"label":"Florence","value":150}]'
+                   data-opts='{"height":320,"fmt":null}'></div>
+              <figcaption>Approximate road distances in km, rounded. Illustrative.</figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="grid grid-2" style="align-items:center">
+          <div class="reveal">
+            <span class="eyebrow">One landscape, many incomes</span>
+            <h2>How the surroundings pay Follonica back</h2>
+            <p class="lead">The town's hinterland isn't scenery — it's supply chain and product all at once.</p>
+          </div>
+          <div class="reveal" style="display:grid;gap:1rem">
+            <div class="card"><h3>Food &amp; wine</h3><p>Maremma olive oil, Sangiovese-based wines, wild boar, honey and cheese give restaurants a story to sell and farms a second income through tastings.</p></div>
+            <div class="card"><h3>Outdoor tourism</h3><p>Trails, gravel-cycling routes and geopark itineraries spread visitors beyond the beach and across the calendar.</p></div>
+            <div class="card"><h3>Industrial anchor</h3><p>Piombino's port and steelworks keep well-paid industrial jobs within commuting range, cushioning the seasonal service economy.</p></div>
+          </div>
+        </div>
+        <div class="btn-row"><a class="btn btn-primary" href="/future/">What comes next for the region →</a></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span data-year>2026</span> Follonica Economy — an independent educational project. Not affiliated with the Comune di Follonica.</p>
+      <nav aria-label="Footer">
+        <a href="/">Home</a>
+        <a href="/economy/">Economy</a>
+        <a href="/future/">Future</a>
+        <a href="/game/">Game</a>
+        <a href="/about/">About</a>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>

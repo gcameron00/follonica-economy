@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="color-scheme" content="light dark" />
+  <title>Mayor of the Gulf · A Follonica Economy Game</title>
+  <meta name="description" content="Run Follonica's economy for ten seasons. Balance tourism, heritage, nature and the off-season to keep the town rich, green and happy." />
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap" />
+  <link rel="stylesheet" href="/assets/css/styles.css" />
+  <style>
+    .g-shell { max-width: 860px; }
+    .g-hud { display:flex; gap:1rem; flex-wrap:wrap; margin-bottom:1.2rem; }
+    .g-hud-item { flex:1 1 140px; background:var(--surface); border:1px solid var(--border); border-radius:12px; padding:.7rem .9rem; box-shadow:var(--shadow); }
+    .g-hud-item span { display:block; color:var(--muted); font-size:.78rem; text-transform:uppercase; letter-spacing:.08em; }
+    .g-hud-item b { font-family:var(--font-display); font-size:1.5rem; }
+    .g-remain { color:var(--terracotta); } .g-remain.done { color:var(--sage); }
+    .g-bars { display:grid; grid-template-columns:repeat(3,1fr); gap:1rem; margin-bottom:1.4rem; }
+    @media (max-width:560px){ .g-bars{ grid-template-columns:1fr; } }
+    .g-bar-top { display:flex; justify-content:space-between; font-size:.86rem; color:var(--muted); margin-bottom:.3rem; }
+    .g-bar-top b { color:var(--ink); font-family:var(--font-display); }
+    .g-track { height:9px; background:var(--surface-2); border-radius:99px; overflow:hidden; border:1px solid var(--border); }
+    .g-fill { height:100%; border-radius:99px; transition:width .5s ease; }
+    .g-levers { display:grid; grid-template-columns:repeat(2,1fr); gap:1rem; }
+    @media (max-width:600px){ .g-levers{ grid-template-columns:1fr; } }
+    .g-lever { background:var(--surface); border:1px solid var(--border); border-radius:14px; padding:1rem; box-shadow:var(--shadow); }
+    .g-lever-head { display:flex; gap:.7rem; align-items:flex-start; }
+    .g-emoji { font-size:1.7rem; line-height:1; }
+    .g-lever h4 { margin:0 0 .15rem; font-size:1.05rem; }
+    .g-lever p { margin:0; color:var(--muted); font-size:.84rem; line-height:1.4; }
+    .g-pips { display:flex; gap:5px; margin:.8rem 0; }
+    .g-pips i { flex:1; height:7px; border-radius:99px; background:var(--surface-2); border:1px solid var(--border); }
+    .g-pips i.on { background:var(--accent); border-color:var(--accent); }
+    .g-stepper { display:flex; align-items:center; justify-content:space-between; gap:.6rem; }
+    .g-stepper button { width:40px; height:40px; border-radius:10px; border:1px solid var(--border); background:var(--surface-2); color:var(--ink); font-size:1.3rem; cursor:pointer; line-height:1; }
+    .g-stepper button:disabled { opacity:.4; cursor:not-allowed; }
+    .g-count { font-family:var(--font-display); font-size:1.3rem; min-width:1.5rem; text-align:center; }
+    .g-actions { display:flex; gap:.7rem; margin:1.4rem 0; flex-wrap:wrap; }
+    .g-log-title { margin:1.6rem 0 .6rem; }
+    .g-log { display:flex; flex-direction:column; gap:.6rem; }
+    .g-entry { background:var(--surface); border:1px solid var(--border); border-left:3px solid var(--accent); border-radius:0 10px 10px 0; padding:.7rem .9rem; font-size:.9rem; }
+    .g-entry.g-intro { color:var(--muted); border-left-color:var(--border); }
+    .g-entry-head { display:flex; justify-content:space-between; align-items:center; }
+    .g-entry-alloc { font-size:1rem; margin:.2rem 0; letter-spacing:.05em; }
+    .g-entry-ev { color:var(--muted); }
+    .g-money.pos { color:var(--sage); font-weight:700; } .g-money.neg { color:var(--terracotta); font-weight:700; }
+    .g-result-card { background:var(--surface); border:2px solid var(--accent); border-radius:16px; padding:1.6rem; box-shadow:var(--shadow); text-align:center; }
+    .g-result-card h3 { font-size:1.8rem; margin:.2rem 0 .3rem; }
+    .g-result-card p { color:var(--muted); max-width:44ch; margin-inline:auto; }
+    .g-final-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:.8rem; margin:1.2rem 0; }
+    @media (max-width:520px){ .g-final-grid{ grid-template-columns:repeat(2,1fr); } }
+    .g-final-grid div { background:var(--surface-2); border-radius:10px; padding:.7rem .3rem; }
+    .g-final-grid b { display:block; font-family:var(--font-display); font-size:1.3rem; }
+    .g-final-grid span { color:var(--muted); font-size:.78rem; }
+  </style>
+  <script defer src="/assets/js/main.js"></script>
+  <script defer src="/assets/js/game.js"></script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-header">
+    <nav class="nav" aria-label="Primary">
+      <a class="brand" href="/">
+        <svg class="mark" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="#0e7490"/><circle cx="22" cy="10" r="4" fill="#e9c46a"/><path d="M3 20 q4 -4 8 0 t8 0 t8 0 t8 0" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round"/><path d="M3 25 q4 -4 8 0 t8 0 t8 0 t8 0" fill="none" stroke="#cff3f6" stroke-width="2.2" stroke-linecap="round"/></svg>
+        Follonica<span style="color:var(--muted);font-weight:400">·Economy</span>
+      </a>
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="menu">☰</button>
+      <div class="nav-links" id="menu">
+        <a href="/">Home</a>
+        <a href="/economy/">Economy</a>
+        <a href="/surroundings/">Surroundings</a>
+        <a href="/future/">Future</a>
+        <a href="/game/" aria-current="page">Game</a>
+        <a href="/about/">About</a>
+        <button class="theme-toggle" type="button" title="Toggle theme">☾</button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <div class="container">
+        <span class="eyebrow">The game</span>
+        <h1>Mayor of the Gulf</h1>
+        <p class="lead">You have ten seasons to run Follonica's economy. Each season, invest six points across tourism, heritage, nature and the off-season. Keep the treasury full, the coast healthy and the residents happy — the final score rewards balance, not greed.</p>
+      </div>
+    </section>
+
+    <section style="padding-top:0">
+      <div class="container g-shell">
+        <div id="game" aria-live="polite">
+          <noscript><p class="note">This game needs JavaScript enabled. The rest of the site works fine without it.</p></noscript>
+        </div>
+
+        <div class="prose" style="margin-top:2.5rem;max-width:70ch">
+          <h2>How to play</h2>
+          <ul>
+            <li><strong>Invest 6 points each season</strong> using the + / − steppers, then press <em>Advance the season</em>.</li>
+            <li><strong>🏖️ Tourism</strong> earns the most money fastest, but wears down the environment and the community if you lean on it too hard.</li>
+            <li><strong>🏛️ Heritage</strong> and <strong>📅 Off-season</strong> give steadier income and keep residents happy.</li>
+            <li><strong>🌲 Nature</strong> earns little directly but rebuilds the environment — which quietly boosts <em>all</em> future revenue.</li>
+            <li>A <strong>random event</strong> hits every season. Some reward the way you've invested; some punish a tired coast.</li>
+            <li>After ten seasons you get a <strong>score out of 100</strong>, weighing money, environment, community and prosperity together.</li>
+          </ul>
+          <p class="note">The game is a playful model of the real trade-off described on the <a href="/future/">Future</a> page — not an economic forecast. Chase pure tourism and watch what happens to the Gulf.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span data-year>2026</span> Follonica Economy — an independent educational project. Not affiliated with the Comune di Follonica.</p>
+      <nav aria-label="Footer">
+        <a href="/">Home</a>
+        <a href="/economy/">Economy</a>
+        <a href="/surroundings/">Surroundings</a>
+        <a href="/future/">Future</a>
+        <a href="/about/">About</a>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>
